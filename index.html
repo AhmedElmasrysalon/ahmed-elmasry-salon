@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صالون أحمد المصري | Ahmed Elmasry Men's Salon</title>
+  <meta name="description" content="صالون أحمد المصري للرجال: قصات شعر، حلاقة ذقن، باقات عناية، وخدمات إضافية بأسعار واضحة.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #0a0d0e;
+      --charcoal: #101719;
+      --panel: #162124;
+      --panel-soft: #1e2b2e;
+      --ivory: #f6f0df;
+      --muted: #b9c0b4;
+      --brass: #c69b48;
+      --brass-bright: #e5c46d;
+      --teal: #2f7b74;
+      --claret: #7b2937;
+      --line: rgba(246, 240, 223, 0.13);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 15%, rgba(47, 123, 116, 0.28), transparent 28rem),
+        linear-gradient(145deg, #090c0d 0%, #111819 46%, #171614 100%);
+      color: var(--ivory);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site {
+      overflow: hidden;
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 10;
+      border-bottom: 1px solid rgba(246, 240, 223, 0.09);
+      background: rgba(10, 13, 14, 0.76);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      width: min(1120px, calc(100% - 32px));
+      height: 72px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark,
+    .hero-mark {
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(229, 196, 109, 0.58);
+      background:
+        linear-gradient(135deg, rgba(229, 196, 109, 0.14), transparent),
+        var(--panel);
+      color: var(--brass-bright);
+      font-weight: 800;
+      box-shadow: inset 0 0 0 7px rgba(198, 155, 72, 0.08);
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 18px;
+      flex: 0 0 auto;
+      overflow: hidden;
+    }
+
+    .brand-mark img,
+    .hero-mark img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .brand-mark img {
+      object-fit: cover;
+    }
+
+    .brand-text strong,
+    .brand-text span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text strong {
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 12px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      min-height: 40px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-links a:hover {
+      background: rgba(246, 240, 223, 0.08);
+      color: var(--ivory);
+    }
+
+    .hero {
+      min-height: 92vh;
+      padding: 122px 0 48px;
+      position: relative;
+      display: grid;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 72px 0 0;
+      background:
+        linear-gradient(90deg, rgba(10, 13, 14, 0.48), rgba(10, 13, 14, 0.18)),
+        repeating-linear-gradient(135deg, rgba(246, 240, 223, 0.045) 0 1px, transparent 1px 18px);
+      pointer-events: none;
+    }
+
+    .hero-inner,
+    .section-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: auto;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 390px;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--brass-bright);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      direction: ltr;
+      text-align: right;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(34px, 8vw, 92px);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 22px);
+    }
+
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      min-height: 48px;
+      border-radius: 7px;
+      padding: 12px 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid transparent;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--brass-bright);
+      color: #14120b;
+    }
+
+    .btn-primary:hover {
+      background: #f3d989;
+    }
+
+    .btn-secondary {
+      border-color: rgba(246, 240, 223, 0.2);
+      background: rgba(246, 240, 223, 0.07);
+      color: var(--ivory);
+    }
+
+    .hero-card {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: linear-gradient(160deg, rgba(30, 43, 46, 0.94), rgba(16, 23, 25, 0.96));
+      box-shadow: var(--shadow);
+      padding: 28px;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-mark {
+      width: min(100%, 240px);
+      height: 240px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      padding: 12px;
+      overflow: hidden;
+      letter-spacing: 0;
+    }
+
+    .hero-mark img {
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .status-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .status-list li,
+    .info-pill {
+      border: 1px solid rgba(246, 240, 223, 0.11);
+      border-radius: 7px;
+      background: rgba(246, 240, 223, 0.045);
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .status-list span,
+    .info-pill span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status-list strong,
+    .info-pill strong {
+      color: var(--ivory);
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .contact-link {
+      min-height: 58px;
+      border: 1px solid rgba(246, 240, 223, 0.12);
+      border-radius: 7px;
+      background: rgba(246, 240, 223, 0.055);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ivory);
+      font-weight: 800;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(229, 196, 109, 0.5);
+      background: rgba(246, 240, 223, 0.09);
+    }
+
+    .contact-link-wide {
+      grid-column: 1 / -1;
+    }
+
+    .platform-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #fff;
+    }
+
+    .platform-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .platform-whatsapp {
+      background: #25d366;
+    }
+
+    .platform-phone {
+      background: var(--brass);
+    }
+
+    .platform-facebook {
+      background: #1877f2;
+    }
+
+    .platform-instagram {
+      background: linear-gradient(135deg, #f58529, #dd2a7b 48%, #515bd4);
+    }
+
+    .platform-maps {
+      background: #34a853;
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid rgba(246, 240, 223, 0.08);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--brass-bright);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(26px, 6vw, 48px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service-card {
+      min-height: 220px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      background: rgba(22, 33, 36, 0.84);
+    }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(47, 123, 116, 0.22);
+      color: var(--brass-bright);
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .price-board {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .price-group {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(16, 23, 25, 0.78);
+    }
+
+    .price-title {
+      min-height: 64px;
+      padding: 18px 20px;
+      background: rgba(246, 240, 223, 0.055);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .price-title h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .price-title span {
+      color: var(--brass-bright);
+      font-size: 13px;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .price-row {
+      min-height: 74px;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(246, 240, 223, 0.08);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .price-row:last-child {
+      border-bottom: 0;
+    }
+
+    .service-name {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--ivory);
+      font-weight: 800;
+    }
+
+    .service-desc {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .label {
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: rgba(123, 41, 55, 0.24);
+      border: 1px solid rgba(229, 196, 109, 0.2);
+      color: var(--brass-bright);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    .price {
+      color: var(--brass-bright);
+      font-size: 22px;
+      font-weight: 900;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      margin-left: 3px;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .visit-panel,
+    .cta-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(22, 33, 36, 0.82);
+      padding: 26px;
+    }
+
+    .visit-panel {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .map-card {
+      min-height: 360px;
+      border-radius: 8px;
+      border: 1px solid rgba(246, 240, 223, 0.12);
+      background:
+        linear-gradient(rgba(16, 23, 25, 0.35), rgba(16, 23, 25, 0.78)),
+        repeating-linear-gradient(90deg, transparent 0 48px, rgba(246, 240, 223, 0.08) 48px 49px),
+        repeating-linear-gradient(0deg, transparent 0 48px, rgba(246, 240, 223, 0.08) 48px 49px),
+        var(--panel-soft);
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    a.map-card {
+      color: var(--ivory);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    a.map-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(229, 196, 109, 0.5);
+    }
+
+    .map-card::before {
+      content: "";
+      width: 74px;
+      height: 74px;
+      border-radius: 50% 50% 50% 6px;
+      transform: rotate(-45deg);
+      background: var(--claret);
+      border: 3px solid var(--brass-bright);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .map-card strong {
+      position: absolute;
+      inset: auto 28px 34px;
+      font-size: 22px;
+    }
+
+    .cta {
+      padding-bottom: 32px;
+    }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      background:
+        linear-gradient(120deg, rgba(47, 123, 116, 0.28), rgba(123, 41, 55, 0.2)),
+        rgba(22, 33, 36, 0.86);
+    }
+
+    .cta-panel h2 {
+      font-size: clamp(28px, 4vw, 44px);
+    }
+
+    .cta-actions {
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    footer {
+      padding: 24px 0 38px;
+      color: rgba(246, 240, 223, 0.56);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 100;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .floating-wa svg {
+      width: 34px;
+      height: 34px;
+      fill: currentColor;
+    }
+    .floating-wa:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .section-head,
+      .visit-grid,
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .service-grid,
+      .price-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        width: min(100% - 24px, 1120px);
+        height: 64px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-text span,
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .nav-links a {
+        padding-inline: 10px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 92px;
+      }
+
+      .hero-inner,
+      .section-inner {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .hero-actions,
+      .cta-actions {
+        display: grid;
+        gap: 12px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .service-grid,
+      .price-board {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-link {
+        font-size: 13px;
+        padding: 12px 8px;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        min-height: 86px;
+        justify-content: center;
+      }
+
+      .service-card {
+        min-height: auto;
+        padding: 20px;
+      }
+
+      .map-card {
+        min-height: 240px;
+        padding: 20px;
+      }
+
+      .price-row {
+        gap: 12px;
+        padding: 12px 16px;
+      }
+      
+      .price-title {
+        padding: 16px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .floating-wa {
+        bottom: 20px;
+        left: 20px;
+        width: 52px;
+        height: 52px;
+      }
+
+      .floating-wa svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="صالون أحمد المصري">
+          <span class="brand-mark">
+            <img src="assets/ahmed-elmasry-logo.png" alt="" aria-hidden="true">
+          </span>
+          <span class="brand-text">
+            <strong>صالون أحمد المصري</strong>
+            <span>Ahmed Elmasry Men's Salon</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#services">الخدمات</a>
+          <a href="#prices">الأسعار</a>
+          <a href="#visit">الزيارة</a>
+          <a class="nav-cta" href="#booking">احجز الآن</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Ahmed Elmasry Men's Salon</p>
+            <h1>إطلالة مرتبة تبدأ من كرسي أحمد المصري.</h1>
+            <p class="lead">قصات رجالي، فيدي، حلاقة كلاسيكية، وعناية كاملة بأسعار واضحة وتجربة سريعة تليق بيومك.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/201121757174" target="_blank" rel="noopener" aria-label="احجز موعد في صالون أحمد المصري على واتساب">احجز موعدك</a>
+              <a class="btn btn-secondary" href="#prices" aria-label="عرض قائمة أسعار صالون أحمد المصري">عرض الأسعار</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="معلومات سريعة عن الصالون">
+            <div>
+              <div class="hero-mark">
+                <img src="assets/ahmed-elmasry-logo.png" alt="شعار صالون أحمد المصري">
+              </div>
+              <ul class="status-list">
+                <li><span>مواعيد العمل</span><strong>يوميا من 9ص إلى 12م</strong></li>
+                <li><span>نظام الزيارة</span><strong>بدون حجز مسبق</strong></li>
+                <li><span>التقييم</span><strong>خدمة 5 نجوم</strong></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <section id="services" aria-labelledby="services-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="kicker">الخدمات</p>
+            <h2 id="services-title">كل ما تحتاجه لخروج أنيق في زيارة واحدة.</h2>
+          </div>
+          <p class="section-copy">خدمات رجالية مركزة، من القص اليومي إلى باقات العريس، مع عناية بالتفاصيل ونظافة الأدوات.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✂</div>
+            <h3>قصات الشعر</h3>
+            <p>قص عادي، فيدي بدرجاته، وقصات أطفال بتشطيب نظيف ومناسب لشكل الوجه.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">◆</div>
+            <h3>اللحية والحلاقة</h3>
+            <p>تشذيب، تحديد خطوط، وحلاقة موس كلاسيكية بمنشفة ساخنة.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">★</div>
+            <h3>باقات كاملة</h3>
+            <p>قصة ولحية، فيدي مع موس كلاسيك، وباقة عريس لتجهيز متكامل.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">•</div>
+            <h3>عناية إضافية</h3>
+            <p>غسيل شعر، صبغة، كيراتين، وجلسات عناية بالبشرة حسب الاحتياج.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" aria-labelledby="prices-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="kicker">قائمة الأسعار</p>
+            <h2 id="prices-title">أسعار واضحة قبل ما تبدأ.</h2>
+          </div>
+          <p class="section-copy">الأسعار بالجنيه المصري، وقد تختلف الخدمات المتقدمة حسب طول الشعر أو حالة الخدمة.</p>
+        </div>
+
+        <div class="price-board">
+          <article class="price-group">
+            <div class="price-title">
+              <h3>قصات الشعر</h3>
+              <span>Haircuts</span>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">قصة عادية <span class="label">الأكثر طلبا</span></div>
+                <div class="service-desc">مقص أو ماكينة</div>
+              </div>
+              <div class="price"><small>EGP</small>150</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">فيدي</div>
+                <div class="service-desc">لو / ميد / هاي فيدي</div>
+              </div>
+              <div class="price"><small>EGP</small>180</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">قصة أطفال</div>
+                <div class="service-desc">أقل من 12 سنة</div>
+              </div>
+              <div class="price"><small>EGP</small>100</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">حلاقة الرأس</div>
+                <div class="service-desc">موس أو ماكينة</div>
+              </div>
+              <div class="price"><small>EGP</small>100</div>
+            </div>
+          </article>
+
+          <article class="price-group">
+            <div class="price-title">
+              <h3>اللحية والحلاقة</h3>
+              <span>Beard</span>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">تشذيب اللحية</div>
+                <div class="service-desc">تنظيف وتشكيل</div>
+              </div>
+              <div class="price"><small>EGP</small>80</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">حلاقة بالموس الكلاسيكي <span class="label">مميز</span></div>
+                <div class="service-desc">منشفة ساخنة + موس</div>
+              </div>
+              <div class="price"><small>EGP</small>130</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">تحديد الخطوط</div>
+                <div class="service-desc">حواف الوجه والرقبة فقط</div>
+              </div>
+              <div class="price"><small>EGP</small>60</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">إزالة الشعر الزائد</div>
+                <div class="service-desc">أنف / أذن / حواجب</div>
+              </div>
+              <div class="price"><small>EGP</small>40</div>
+            </div>
+          </article>
+
+          <article class="price-group">
+            <div class="price-title">
+              <h3>الباقات</h3>
+              <span>Combos</span>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">قصة + لحية</div>
+                <div class="service-desc">الإطلالة الكاملة</div>
+              </div>
+              <div class="price"><small>EGP</small>200</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">فيدي + موس كلاسيك <span class="label">الأكثر طلبا</span></div>
+                <div class="service-desc">من الرأس للذقن</div>
+              </div>
+              <div class="price"><small>EGP</small>280</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">باقة العريس</div>
+                <div class="service-desc">قصة + لحية + منشفة ساخنة + عناية</div>
+              </div>
+              <div class="price"><small>EGP</small>450</div>
+            </div>
+          </article>
+
+          <article class="price-group">
+            <div class="price-title">
+              <h3>خدمات إضافية</h3>
+              <span>Extras</span>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">غسيل الشعر</div>
+                <div class="service-desc">شامبو + سشوار</div>
+              </div>
+              <div class="price"><small>EGP</small>60</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">صبغة الشعر</div>
+                <div class="service-desc">صبغة كاملة</div>
+              </div>
+              <div class="price"><small>EGP</small>250</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">كيراتين / تمليس</div>
+                <div class="service-desc">حسب طول الشعر</div>
+              </div>
+              <div class="price"><small>EGP</small>+350</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="service-name">عناية بالبشرة</div>
+                <div class="service-desc">جلسة فيشيال أساسية</div>
+              </div>
+              <div class="price"><small>EGP</small>120</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" aria-labelledby="visit-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="kicker">الزيارة</p>
+            <h2 id="visit-title">تعالى في أي وقت مناسب خلال اليوم.</h2>
+          </div>
+          <p class="section-copy">تواصل مباشرة عبر واتساب أو الهاتف، وتابع شغل الصالون على فيسبوك وإنستجرام، أو افتح الموقع على خرائط جوجل.</p>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-panel">
+            <div class="info-pill"><span>ساعات العمل</span><strong>9 صباحا - 12 مساء</strong></div>
+            <div class="info-pill"><span>الحجز</span><strong>متاح بالحضور المباشر</strong></div>
+            <div class="info-pill"><span>العملة</span><strong>الجنيه المصري</strong></div>
+            <div class="contact-grid" aria-label="روابط التواصل">
+              <a class="contact-link" href="https://wa.me/201121757174" target="_blank" rel="noopener" aria-label="واتساب صالون أحمد المصري للحجز">
+                <span class="platform-icon platform-whatsapp" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.51 14.83L2.2 22l5.3-1.3A9.86 9.86 0 1 0 12.04 2Zm0 1.8a8.06 8.06 0 0 1 6.83 12.35 8.05 8.05 0 0 1-10.96 2.74l-.38-.22-3.1.76.78-3.02-.25-.4A8.06 8.06 0 0 1 12.04 3.8Zm-3.5 3.72c-.18 0-.46.07-.7.33-.24.27-.92.9-.92 2.18 0 1.28.95 2.52 1.08 2.7.13.17 1.84 2.94 4.55 4 .56.22 1 .35 1.34.45.56.18 1.08.15 1.49.09.45-.07 1.38-.56 1.58-1.1.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.39-.69-1.61-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46Z"/></svg>
+                </span>
+                واتساب (للحجز)
+              </a>
+              <a class="contact-link" href="https://wa.me/" target="_blank" rel="noopener" aria-label="واتساب صالون أحمد المصري للشكاوي">
+                <span class="platform-icon platform-whatsapp" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.51 14.83L2.2 22l5.3-1.3A9.86 9.86 0 1 0 12.04 2Zm0 1.8a8.06 8.06 0 0 1 6.83 12.35 8.05 8.05 0 0 1-10.96 2.74l-.38-.22-3.1.76.78-3.02-.25-.4A8.06 8.06 0 0 1 12.04 3.8Zm-3.5 3.72c-.18 0-.46.07-.7.33-.24.27-.92.9-.92 2.18 0 1.28.95 2.52 1.08 2.7.13.17 1.84 2.94 4.55 4 .56.22 1 .35 1.34.45.56.18 1.08.15 1.49.09.45-.07 1.38-.56 1.58-1.1.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.39-.69-1.61-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46Z"/></svg>
+                </span>
+                واتساب (للشكاوي)
+              </a>
+              <a class="contact-link" href="tel:+201033133379" aria-label="اتصال بصالون أحمد المصري">
+                <span class="platform-icon platform-phone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/></svg>
+                </span>
+                اتصال
+              </a>
+              <a class="contact-link" href="https://www.facebook.com/AhmedElMasryBarber/" target="_blank" rel="noopener" aria-label="فيسبوك صالون أحمد المصري">
+                <span class="platform-icon platform-facebook" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6c-.29-.04-1.27-.12-2.42-.12-2.4 0-4.04 1.46-4.04 4.15v2.32H8v3.1h2.74V22h2.76Z"/></svg>
+                </span>
+                فيسبوك
+              </a>
+              <a class="contact-link" href="https://www.instagram.com/ahmed_elmasry0000" target="_blank" rel="noopener" aria-label="إنستجرام صالون أحمد المصري">
+                <span class="platform-icon platform-instagram" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.8 2.1a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 2a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z"/></svg>
+                </span>
+                إنستجرام
+              </a>
+              <a class="contact-link" href="https://maps.app.goo.gl/ANStqxoBLoJQ5uhd9" target="_blank" rel="noopener" aria-label="موقع صالون أحمد المصري على خرائط جوجل">
+                <span class="platform-icon platform-maps" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 7.5 12.5 7.5 12.5s7.5-7.25 7.5-12.5A7.5 7.5 0 0 0 12 2Zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Z"/></svg>
+                </span>
+                خرائط جوجل
+              </a>
+            </div>
+          </div>
+          <a class="map-card" href="https://maps.app.goo.gl/ANStqxoBLoJQ5uhd9" target="_blank" rel="noopener" aria-label="افتح موقع صالون أحمد المصري على خرائط جوجل">
+            <strong>صالون أحمد المصري</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="booking" aria-labelledby="booking-title">
+      <div class="section-inner">
+        <div class="cta-panel">
+          <div>
+            <p class="kicker">خدمتك على عيننا</p>
+            <h2 id="booking-title">احجز موعدك أو تعالى على طول.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/201121757174" target="_blank" rel="noopener" aria-label="راسل صالون أحمد المصري على واتساب">
+              <span class="platform-icon platform-whatsapp" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.51 14.83L2.2 22l5.3-1.3A9.86 9.86 0 1 0 12.04 2Zm0 1.8a8.06 8.06 0 0 1 6.83 12.35 8.05 8.05 0 0 1-10.96 2.74l-.38-.22-3.1.76.78-3.02-.25-.4A8.06 8.06 0 0 1 12.04 3.8Zm-3.5 3.72c-.18 0-.46.07-.7.33-.24.27-.92.9-.92 2.18 0 1.28.95 2.52 1.08 2.7.13.17 1.84 2.94 4.55 4 .56.22 1 .35 1.34.45.56.18 1.08.15 1.49.09.45-.07 1.38-.56 1.58-1.1.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.39-.69-1.61-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46Z"/></svg>
+              </span>
+              واتساب
+            </a>
+            <a class="btn btn-secondary" href="tel:+201033133379" aria-label="اتصل بصالون أحمد المصري">
+              <span class="platform-icon platform-phone" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/></svg>
+              </span>
+              اتصال
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section-inner">صالون أحمد المصري · الأسعار بالجنيه المصري · قد تتغير الأسعار بدون إشعار مسبق</div>
+    </footer>
+    <a href="https://wa.me/201121757174" class="floating-wa" aria-label="تواصل معنا على واتساب" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.51 14.83L2.2 22l5.3-1.3A9.86 9.86 0 1 0 12.04 2Zm0 1.8a8.06 8.06 0 0 1 6.83 12.35 8.05 8.05 0 0 1-10.96 2.74l-.38-.22-3.1.76.78-3.02-.25-.4A8.06 8.06 0 0 1 12.04 3.8Zm-3.5 3.72c-.18 0-.46.07-.7.33-.24.27-.92.9-.92 2.18 0 1.28.95 2.52 1.08 2.7.13.17 1.84 2.94 4.55 4 .56.22 1 .35 1.34.45.56.18 1.08.15 1.49.09.45-.07 1.38-.56 1.58-1.1.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28-.24-.12-1.39-.69-1.61-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46Z"/></svg>
+    </a>
+  </main>
+</body>
+</html>
